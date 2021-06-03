@@ -1,4 +1,5 @@
 from apple_tree import AppleTree
+from apple import Apple
 
 tree = AppleTree()
 
