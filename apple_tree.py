@@ -1,16 +1,36 @@
+from apple import Apple
+
 class AppleTree:
     def __init__(self):
-        pass
-  
+        self.height = 0
+        self.age = 0
+        self.dead = False
+        self.apples = []
+        
     def age_tree(self):
-        pass
-   
+        if self.dead == False:
+            self.age += 1
+            if self.age < 30:
+                self.height += 1
+            self.apples.append(Apple(15))
+            if self.age > 100:
+                self.dead = True
+
     def is_dead(self):
-        pass
+        if self.age > 100:
+            self.dead = True
+        return self.dead
     
     def any_apples(self):
-        pass
+        if (len(self.apples) > 0):
+            return True
+        return False
+            
 
     def pick_an_apple(self):
-        raise Exception('No apples on your tree')
+        try:
+            picked_apple = self.apples.pop()
+        except:
+            raise Exception('No apples on your tree')
+        return picked_apple
         # Read the tests before coding.

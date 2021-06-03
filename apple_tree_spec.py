@@ -37,7 +37,7 @@ class ValidateAppleTreeClass(unittest.TestCase):
     
     def test_pick_an_apple(self):
         """When you call the pick_an_apple method, it will return you an apple object"""
-        apple = Apple()
+        apple = Apple(10)
         apple_tree = AppleTree()
         for _ in itertools.repeat(None, 10):
             apple_tree.age_tree()
