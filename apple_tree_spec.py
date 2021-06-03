@@ -35,19 +35,19 @@ class ValidateAppleTreeClass(unittest.TestCase):
             apple_tree.age_tree()
         self.assertTrue(apple_tree.any_apples())
     
-    def test_pick_an_apple(self):
-        """When you call the pick_an_apple method, it will return you an apple object"""
-        apple = Apple()
-        apple_tree = AppleTree()
-        for _ in itertools.repeat(None, 10):
-            apple_tree.age_tree()
-        self.assertEqual(type(apple_tree.pick_an_apple()), type(apple))
+    # def test_pick_an_apple(self):
+    #     """When you call the pick_an_apple method, it will return you an apple object"""
+    #     apple = Apple()
+    #     apple_tree = AppleTree()
+    #     for _ in itertools.repeat(None, 10):
+    #         apple_tree.age_tree()
+    #     self.assertEqual(type(apple_tree.pick_an_apple()), type(apple))
     
-    def test_pick_an_apple_error(self):
-        """When you call the pick_an_apple method with a tree that has 0 apples, it will raise an error"""
-        apple_tree = AppleTree()
-        with self.assertRaises(Exception):
-            apple_tree.pick_an_apple()
+    # def test_pick_an_apple_error(self):
+    #     """When you call the pick_an_apple method with a tree that has 0 apples, it will raise an error"""
+    #     apple_tree = AppleTree()
+    #     with self.assertRaises(Exception):
+    #         apple_tree.pick_an_apple()
 
 if __name__ == '__main__':
     unittest.main()
