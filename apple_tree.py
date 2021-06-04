@@ -7,12 +7,13 @@ class AppleTree:
         self.apple_count = []
 
     def age_tree(self):
+        counter = self.age
         self.age += 1
         if self.height <= 300:
             self.height += 10
-        if self.age >= 4:
-            new_apple = Apple(self.age)
-            self.apple_count.append(new_apple)
+        while counter >= 4:
+            self.apple_count.append(Apple(counter))
+            counter -= 1
    
     def is_dead(self):
         if self.age < 100:
