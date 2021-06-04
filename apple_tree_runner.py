@@ -1,6 +1,7 @@
 from apple_tree import AppleTree
+from apple import *
 
-tree = AppleTree()
+tree = AppleTree(1,1)
 
 while tree.any_apples() == False:
     tree.age_tree()
@@ -13,7 +14,7 @@ while tree.is_dead() == False:
     while tree.any_apples(): 
         apple_basket.append(tree.pick_an_apple())
 
-    avg_diameter = None # change this so it is the calculated avg diameter of all apples in the basket. 
+    avg_diameter += Apple.diameter() # change this so it is the calculated avg diameter of all apples in the basket. 
 
     print(f"Year {tree.age} Report")
     print(f"Tree height: {tree.height} feet")
