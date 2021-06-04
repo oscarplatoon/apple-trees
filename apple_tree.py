@@ -1,12 +1,13 @@
 class AppleTree:
-    def __init__(self):
-        pass
+    def __init__(self, height):
+        self.height = height
   
-    def age_tree(self):
-        pass
+    def age_tree(self, age):
+        self.age = age + 1
    
-    def is_dead(self):
-        pass
+    def is_dead(self, age):
+        if self.age >= 100:
+            self.age = True
     
     def any_apples(self):
         pass

@@ -3,6 +3,9 @@ from apple import *
 
 class ValidateAppleClass(unittest.TestCase):
     """Tests for `apple.py`."""
+    def test_apple_num(self):
+        apple_diameter = Apple()
+        self.assertEqual(apple_diameter, int)
 
     def test_apple_diameter(self):
         """When you create an Apple, it will have a diameter greater than 0"""

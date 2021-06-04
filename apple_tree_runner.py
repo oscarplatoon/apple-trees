@@ -20,6 +20,6 @@ while tree.is_dead() == False:
     print(f"Harvest:     {len(apple_basket)} apples with an average diameter of {avg_diameter} inches")
 
     # Age the tree another year
-    tree.age_tree()
+    tree.age_tree(1)
 
 print(f"The tree is now dead at age {tree.age}! Time to plant a new one!")
