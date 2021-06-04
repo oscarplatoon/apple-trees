@@ -13,11 +13,16 @@ while tree.is_dead() == False:
     while tree.any_apples(): 
         apple_basket.append(tree.pick_an_apple())
 
-    avg_diameter = None # change this so it is the calculated avg diameter of all apples in the basket. 
+    avg_diameter = 0
+    for x in apple_basket:
+        avg_diameter += x.diameter
+    avg_diameter= avg_diameter/len(apple_basket)
+
+    
 
     print(f"Year {tree.age} Report")
-    print(f"Tree height: {tree.height} feet")
-    print(f"Harvest:     {len(apple_basket)} apples with an average diameter of {avg_diameter} inches")
+    print(f"Tree height: {round(tree.height,2)} feet")
+    print(f"Harvest:     {len(apple_basket)} apples with an average diameter of {round(avg_diameter,2)} inches")
 
     # Age the tree another year
     tree.age_tree()
