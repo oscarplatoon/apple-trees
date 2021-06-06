@@ -1,3 +1,5 @@
+from random import randint
+
 class Apple:
     def __init__(self):
-        pass
+        self.diameter = randint(4, 8)
